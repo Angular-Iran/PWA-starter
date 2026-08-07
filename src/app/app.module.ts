@@ -1,12 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode, provideBrowserGlobalErrorListeners } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppComponent } from './app.component';
-
-import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -15,9 +12,12 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
-  providers: [],
+  providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
