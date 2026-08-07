@@ -15,6 +15,7 @@ module.exports = defineConfig([
     ],
     processor: angular.processInlineTemplates,
     rules: {
+      '@angular-eslint/prefer-standalone': 'off',
       '@angular-eslint/directive-selector': [
         'error',
         {
