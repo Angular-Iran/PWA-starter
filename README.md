@@ -19,6 +19,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 This repository includes a GitHub Actions workflow that publishes the production build to GitHub Pages.
 
 - In GitHub, set **Settings → Pages → Build and deployment → Source** to **GitHub Actions**
+- Ensure GitHub Pages is already enabled for the repository before relying on the workflow; the workflow does not create the Pages site automatically
 - Push changes to the `master` branch to trigger a deployment
 - The deployed site will be served from `/PWA-starter/`
 
