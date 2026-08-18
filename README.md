@@ -1,6 +1,6 @@
 # AngularIranPWA
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+This project uses [Angular CLI](https://github.com/angular/angular-cli) 22.
 
 ## Development server
 
@@ -12,15 +12,15 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test` to execute the unit tests.
 
-## Running end-to-end tests
+## Running lint checks
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `ng lint` to execute the ESLint-based lint checks.
 
 ## Further help
 

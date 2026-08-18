@@ -1,12 +1,18 @@
 {
+  "$schema": "./node_modules/@angular/service-worker/config/schema.json",
   "index": "/index.html",
   "assetGroups": [
     {
-      "name": "Angular Iran",
+      "name": "app",
       "installMode": "prefetch",
       "resources": {
-        "files": ["/favicon.ico", "/index.html"],
-        "versionedFiles": ["/*.bundle.css", "/*.bundle.js", "/*.chunk.js"]
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/manifest.json",
+          "/*.css",
+          "/*.js"
+        ]
       }
     },
     {
@@ -14,7 +20,11 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "resources": {
-        "files": ["/assets/**"]
+        "files": [
+          "/assets/**",
+          "/browserconfig.xml",
+          "/safari-pinned-tab.svg"
+        ]
       }
     }
   ]
