@@ -14,6 +14,14 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
+## GitHub Pages deployment
+
+This repository includes a GitHub Actions workflow that publishes the production build to GitHub Pages.
+
+- In GitHub, set **Settings → Pages → Build and deployment → Source** to **GitHub Actions**
+- Push changes to the `master` branch to trigger a deployment
+- The deployed site will be served from `/PWA-starter/`
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests.
