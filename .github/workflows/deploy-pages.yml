@@ -36,12 +36,12 @@ jobs:
         run: npm ci
 
       - name: Build application
-        run: npx ng build --configuration production --base-href "/PWA-starter/"
+        run: npx ng build --configuration production --base-href "/PWA-starter/" --output-path dist/github-pages
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/angular-iran-pwa/browser
+          path: dist/github-pages/browser
 
   deploy:
     needs: build
